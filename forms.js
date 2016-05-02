@@ -21,6 +21,8 @@ $(document).ready(function() {
 
       appendDom(values);
 
+      //$('#container')
+
       //function that adds salary
 
         //totalSalaries += Number.parseInt(values.yearlysalary / 12);
@@ -38,9 +40,12 @@ $(document).ready(function() {
     function appendDom(empInfo) {
       $('#container').append('<div class="person"></div>');
       var $el = $('#container').children().last();
-      $el.append('<p>' + empInfo.employeefirstname + " " + empInfo.employeelastname + " " + empInfo.employeenumber + " " + empInfo.jobtitle + " " + empInfo.yearlysalary + '</p><p> Total Cost of Salaries $' + totalSalaries + '<p>');
-
-    }
+      $el.append('<p>' + empInfo.employeefirstname + " " + empInfo.employeelastname + "</p>");
+      $el.append('<p>' + empInfo.employeenumber + '</p>');
+      $el.append('<p>' + empInfo.jobtitle + '</p>');
+      $el.append('<p>' + empInfo.yearlysalary + '</p>');
+      $el.append('<p> Total Monthly Cost of Salaries $' + totalSalaries + '</p>');
+    } 
 
 
 
